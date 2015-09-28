@@ -10,6 +10,13 @@ module.exports = function (grunt) {
         'watch'
     ]);
     
+    grunt.registerTask('deploy', [
+        'clean',
+        'build',
+        'gh-pages',
+        'gh-pages-clean'
+    ]);
+    
     grunt.registerTask('default', [
         'run'
     ]);
