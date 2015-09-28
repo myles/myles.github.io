@@ -1,0 +1,13 @@
+body, html {
+	height: 100%;
+}
+
+body {
+	margin: 0 auto;
+	background-color: $base-background-color;
+}
+
+a {
+	color: $secondary-background-color;
+	border-bottom: 1px solid $secondary-background-color;
+}

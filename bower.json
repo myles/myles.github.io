@@ -1,0 +1,12 @@
+{
+  "name": "myles-github-io",
+  "version": "1.0.0",
+  "authors": [
+    "Myles Braithwaite <me@mylesbraithwaite.com>"
+  ],
+  "dependencies": {
+    "bourbon": "~4.2.5",
+    "neat": "~1.7.2",
+    "normalize-scss": "~3.0.3"
+  }
+}
