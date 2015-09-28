@@ -1,7 +1,8 @@
 module.exports = function (grunt) {
     var config = {
         options: {
-            base: 'build'
+            base: 'build',
+            branch: 'master'
         },
         src: ['**']
     };
