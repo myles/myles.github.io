@@ -17,7 +17,16 @@ module.exports = function (grunt) {
                 'sass'
             ],
             files: [
-                'source/assets/stylesheets/*.scss'
+                'source/assets/stylesheets/*.scss',
+                'source/assets/stylesheets/**/*.scss'
+            ]
+        },
+        coffee: {
+            tasks: [
+                'coffee'
+            ],
+            files: [
+                'source/assets/javascript/*.coffee'
             ]
         }
     };

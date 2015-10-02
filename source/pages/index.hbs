@@ -1,1 +1,32 @@
-<p>I'm an <a href="https://github.com/myles">open source</a> developer living in Toronto. I run a small consultanting company called <a href="http://monkeyinyoursoul.com/">Monkey in your Soul</a> (you should hire me).</p>
+<div id="home" class="wrapper bio">
+	<div class="container">
+		<article>
+			<header>
+				<h1>{{ site.title }}</h1>
+			</header>
+	
+			<section>
+				{{#markdown}}{{> 01_bio }}{{/markdown}}
+			</section>
+			
+			<footer>
+				<ul>
+					<li><a href="#projects">Projects</a></li>
+				</ul>
+			</footer>
+		</article>
+	</div>
+</div>
+
+<div id="projects" class="wrapper projects">
+	<div class="container">
+		<article>
+			<header>
+				<h1>GitHub Projects</h1>
+			</header>
+			
+			<section id="js-github-projects"></section>
+			{{> 02_projects }}
+		</article>
+	</div>
+</div>

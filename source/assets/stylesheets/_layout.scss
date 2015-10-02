@@ -1,11 +1,7 @@
 .wrapper {
-	@include outer-container;
-	@include padding(75px null);
+	width: 100%;
 	
-	height: 100vh;
-}
-
-.container {
-	@include span-columns(8);
-	@include shift(2);
+	.container {
+		height: 100vh;
+	}
 }

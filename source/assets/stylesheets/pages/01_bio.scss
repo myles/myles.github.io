@@ -1,0 +1,42 @@
+.bio {
+	background-color: $base-background-color;
+	
+	.container {
+	  @include align-items(center);
+	  @include display(flex);
+	  @include justify-content(center);
+		
+		@include outer-container;
+
+		height: 100vh;
+	}
+	
+	article {
+		@include span-columns(8);
+		
+		a {
+			color: $secondary-background-color;
+			border-bottom: 1px solid $secondary-background-color;
+		}
+		
+		h1, p {
+			color: $light-gray;
+		}
+	}
+	
+	header {
+	  @include margin(1em null);
+	
+		h1 {
+			@include padding(5px);
+			display: inline;
+			text-transform: uppercase;
+			border: 5px solid $secondary-background-color;
+			line-height: 0;
+		}
+	}
+	
+	section {
+		@include padding(null 2em);
+	}
+}

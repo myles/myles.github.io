@@ -1,0 +1,1 @@
+I'm an [open source](https://github.com/myles "Myles Braithwaite's GitHub Profile") developer living in Toronto. I run a small consultating company called [Monkey in your Soul](http://monkeyinyoursoul.com/) (you should hire me).
