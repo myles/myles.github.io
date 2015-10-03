@@ -8,15 +8,6 @@ $ ->
             '<h2>{{full_name}}</h2>' +
           '</a>' +
           '<p>{{description}}</p>' +
-          '<ul>' +
-            '<li><a href="{{git_url}}"><span class="octicon octicon-repo"></span></a></li>' +
-            '{{#if has_wiki}}' +
-              '<li><a href="{{html_url}}/wiki"><span class="octicon octicon-book"></span></a></li>' +
-            '{{/if}}' +
-            '{{#if has_issues}}' +
-              '<li><a href="{{html_url}}/issues"><span class="octicon octicon-issue-opened"></span></a></li>' +
-            '{{/if}}' +
-          '</ul>' +
         '</div>' +
       '</li>' +
     '{{/unless}}' +
