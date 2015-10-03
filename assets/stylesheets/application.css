@@ -416,6 +416,21 @@ html {
   box-sizing: inherit;
 }
 
+/* Hide all icons that are waiting to be injected */
+img.iconic {
+  display: none;
+}
+
+/* Make sure filled and text elements only get fills */
+.iconic-property-fill, .iconic-property-text {
+  stroke: none !important;
+}
+
+/* Make sure stroked elements only get strokes */
+.iconic-property-stroke {
+  fill: none !important;
+}
+
 button, input[type="button"], input[type="reset"], input[type="submit"] {
   appearance: none;
   background-color: #477dca;
@@ -707,6 +722,40 @@ body {
 .bio section {
   padding-right: 2em;
   padding-left: 2em;
+}
+.bio footer ul {
+  text-align: center;
+}
+.bio footer li {
+  padding: 1.5em;
+  display: inline;
+}
+.bio footer li a {
+  border: none;
+}
+.bio footer .iconic {
+  width: 3.5em !important;
+  height: 3.5em !important;
+}
+.bio footer .iconic * {
+  fill: #ddd;
+  stroke: #ddd;
+}
+.bio footer a:hover .iconic-globe .iconic-globe-land-mass {
+  fill: #80B23C;
+  stroke: #80B23C;
+}
+.bio footer a:hover .iconic-envelope * {
+  fill: #c1b49a;
+  stroke: #c1b49a;
+}
+.bio footer a:hover .iconic-social-twitter * {
+  fill: #00b4f3;
+  stroke: #00b4f3;
+}
+.bio footer a:hover .iconic-social-github * {
+  fill: #333;
+  stroke: #333;
 }
 
 .projects .container {
