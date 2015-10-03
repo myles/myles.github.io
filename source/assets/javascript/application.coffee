@@ -16,9 +16,6 @@ $ ->
             '{{#if has_issues}}' +
               '<li><a href="{{html_url}}/issues"><span class="octicon octicon-issue-opened"></span></a></li>' +
             '{{/if}}' +
-            '{{#if has_downloads}}' +
-              '<li><a href="{{downloads_url}}"><span class="octicon octicon-desktop-download"></span></a></li>' +
-            '{{/if}}' +
           '</ul>' +
         '</div>' +
       '</li>' +

@@ -39,4 +39,46 @@
 	section {
 		@include padding(null 2em);
 	}
+	
+	footer {
+		ul {
+			text-align: center;
+		}
+		
+		li {
+			@include padding(1.5em);
+			display: inline;
+			
+			a {
+				border: none;
+			}
+		}
+		
+		.iconic {
+			width: 3.5em !important;
+			height: 3.5em !important;
+			
+			* {
+				@include iconic-color($light-gray);
+			}
+		}
+		
+		a:hover {
+			.iconic-globe .iconic-globe-land-mass {
+				@include iconic-color(#80B23C);
+			}
+			
+			.iconic-envelope * {
+				@include iconic-color(#c1b49a);
+			}
+			
+		  .iconic-social-twitter * {
+		    @include iconic-color(#00b4f3);
+		  }
+			
+		  .iconic-social-github * {
+		    @include iconic-color(#333);
+		  }
+		}
+	}
 }
