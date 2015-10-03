@@ -1,6 +1,7 @@
 module.exports = function (grunt) {
     grunt.registerTask('build', [
         'assemble',
+        'favicons',
         'copy',
         'sass',
         'coffee'
