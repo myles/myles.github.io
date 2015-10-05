@@ -2,17 +2,21 @@
 	background-color: $base-background-color;
 	
 	.container {
-	  @include align-items(center);
-	  @include display(flex);
-	  @include justify-content(center);
-		
+		@include media($medium-screen-up) {
+		  @include align-items(center);
+		  @include display(flex);
+		  @include justify-content(center);
+			
+			height: 100vh;
+		}
+	  
 		@include outer-container;
-
-		height: 100vh;
 	}
 	
 	article {
-		@include span-columns(8);
+		@include media($medium-screen-up) {
+			@include span-columns(8);
+		}
 		
 		a {
 			color: $secondary-background-color;
@@ -24,20 +28,22 @@
 		}
 	}
 	
-	header {
-	  @include margin(1em null);
-	
-		h1 {
-			@include padding(5px);
-			display: inline;
-			text-transform: uppercase;
-			border: 5px solid $secondary-background-color;
-			line-height: 0;
+	@include media($medium-screen-up) {
+		header {
+			@include margin(1em null);
+			
+			h1 {
+				@include padding(5px);
+				display: inline;
+				text-transform: uppercase;
+				border: 5px solid $secondary-background-color;
+				line-height: 0;
+			}
 		}
-	}
-	
-	section {
-		@include padding(null 2em);
+		
+		section {
+			@include padding(null 2em);
+		}
 	}
 	
 	footer {
