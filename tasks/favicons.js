@@ -3,7 +3,8 @@ module.exports = function (grunt) {
         options: {
             precomposed: true,
             trueColor: true,
-            html: 'build/index.html'
+            html: 'build/index.html',
+            HTMLPrefix: '/'
         },
         icons: {
             src: 'source/assets/images/suite-and-tie.png',
