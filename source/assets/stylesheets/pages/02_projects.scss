@@ -29,6 +29,12 @@
 			margin-bottom: 2em;
 		}
 		
+		.bullet-links {
+			img {
+				@include size(1em);
+			}
+		}
+		
 		h2 {
 			border-bottom: 1px solid transparentize($base-font-color, 0.8);
 			display: inline-block;
