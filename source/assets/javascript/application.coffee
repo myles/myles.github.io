@@ -11,6 +11,11 @@ $ ->
             '</h2>' +
           '</a>' +
           '<ul class="bullet-links">' +
+            '<li>' +
+              '<a href="{{html_url}}">' +
+                '<img src="/assets/images/octoface.svg" title="GitHub">' +
+              '</a>' +
+            '</li>' +
             '{{#if homepage}}' +
             '<li>' +
               '<a href="{{homepage}}">' +
@@ -29,6 +34,13 @@ $ ->
             '<li>' +
               '<a href="{{html_url}}/issues">' +
                 '<img src="/assets/images/issue-opened.svg" title="Wiki">' +
+              '</a>' +
+            '</li>' +
+            '{{/if}}' +
+            '{{#if has_downloads}}' +
+            '<li>' +
+              '<a href="{{html_url}}/releases">' +
+                '<img src="/assets/images/desktop-download.svg" title="Downloads">' +
               '</a>' +
             '</li>' +
             '{{/if}}' +
