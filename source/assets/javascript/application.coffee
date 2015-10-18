@@ -52,12 +52,16 @@ $ ->
     '{{/each}}' +
     '</ul>'
   
-  api_url = 'https://api.github.com/users/myles/repos?sort=updated&type=all&callback=?'
-  
   template = Handlebars.compile(source)
   articleRepo = $('#js-github-projects')
+  articleArchiveRepo = $('#js-github-archive-projects')
   
-  jQuery.getJSON api_url, (data) ->
+  jQuery.getJSON 'https://api.github.com/users/myles/repos?sort=updated&type=all&callback=?', (data) ->
     articleRepo.html(template(data))
     return
+  
+  jQuery.getJSON 'https://api.github.com/orgs/myles-archive/repos?sort=updated&type=all&callback=?', (data) ->
+    articleArchiveRepo.html(template(data))
+    return
+  
   return

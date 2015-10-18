@@ -13,7 +13,10 @@ module.exports = function (grunt) {
         pages: {
             files: {
                 'build/': [
-                    'source/pages/*.hbs'
+                    'source/pages/index.hbs'
+                ],
+                'build/archive/': [
+                    'source/pages/archive/index.hbs'
                 ]
             }
         }
