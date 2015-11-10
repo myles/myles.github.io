@@ -19,14 +19,30 @@
 		overflow: auto;
 		padding: 0;
 		
-		.bullet {
-			@include flex-basis(20em);
-			@include flex-grow(1);
+		@include media($medium-screen-up) {
+			.bullet {
+				@include flex-basis(50%);
+				@include flex-grow(1);
+			}
+		}
+		
+		@include media($xlarge-screen-up) {
+			.bullet {
+				@include flex-basis(33%);
+				@include flex-grow(1);
+			}
+		}
+		
+		@include media($fucking-huge-screen-up) {
+			.bullet {
+				@include flex-basis(25%);
+				@include flex-grow(1);
+			}
 		}
 		
 		.bullet-content {
-			margin-left: $icon-bullet-size * 1.4;
-			margin-bottom: 2em;
+			width: 95%;
+			margin: em($base-line-height) auto;
 		}
 		
 		.bullet-links {
@@ -36,11 +52,15 @@
 		}
 		
 		h2 {
+			width: 100%;
 			border-bottom: 1px solid transparentize($base-font-color, 0.8);
 			display: inline-block;
 			font-size: $icon-bullet-size / 2.5;
 			margin: 0 0 ($icon-bullet-size / 6) 0;
 			padding-top: $icon-bullet-size / 7;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
 		}
 		
 		li {

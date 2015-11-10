@@ -6,8 +6,8 @@ $ ->
         '<div class="bullet-content">' +
           '<a href="{{html_url}}">' +
             '<h2>' + 
+              '{{#if language}}{{language}}: {{/if}}' +
               '{{full_name}} ' +
-              '{{#if language}}<em>({{language}})</em>{{/if}}' +
             '</h2>' +
           '</a>' +
           '<ul class="bullet-links">' +
@@ -37,13 +37,13 @@ $ ->
               '</a>' +
             '</li>' +
             '{{/if}}' +
-            '{{#if has_downloads}}' +
-            '<li>' +
-              '<a href="{{html_url}}/releases">' +
-                '<img src="/assets/images/desktop-download.svg" title="Downloads">' +
-              '</a>' +
-            '</li>' +
-            '{{/if}}' +
+            # '{{#if has_downloads}}' +
+            # '<li>' +
+            #   '<a href="{{html_url}}/releases">' +
+            #     '<img src="/assets/images/desktop-download.svg" title="Downloads">' +
+            #   '</a>' +
+            # '</li>' +
+            # '{{/if}}' +
           '</ul>' +
           '<p>{{description}}</p>' +
         '</div>' +

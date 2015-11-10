@@ -2,17 +2,24 @@
 	background-color: $base-background-color;
 	
 	.container {
-	  @include align-items(center);
-	  @include display(flex);
-	  @include justify-content(center);
-		
-		@include outer-container;
+	  @include outer-container;
+	  
+	  @include media($large-screen-up) {
+		  @include align-items(center);
+		  @include display(flex);
+		  @include justify-content(center);
 
-		height: 100vh;
+		  height: 100vh;
+	  }
 	}
 	
 	article {
-		@include span-columns(8);
+		@include span-columns(12);
+		
+		@include media($large-screen-up) {
+			@include span-columns(8);
+			max-width: 650px;
+		}
 		
 		a {
 			color: $secondary-background-color;
@@ -26,6 +33,11 @@
 	
 	header {
 	  @include margin(1em null);
+	  text-align: center;
+	  
+	  @include media($large-screen-up) {
+		  text-align: left;
+	  }
 	
 		h1 {
 			@include padding(5px);
@@ -46,7 +58,12 @@
 		}
 		
 		li {
-			@include padding(1.5em);
+			@include padding(.5em);
+			
+			@include media($medium-screen-up) {
+				@include padding(1.5em);
+			}
+			
 			display: inline;
 			
 			a {
@@ -55,8 +72,18 @@
 		}
 		
 		.iconic {
-			width: 3.5em !important;
-			height: 3.5em !important;
+			width: 1.5em !important;
+			height: 1.5em !important;
+			
+			@include media($small-screen-up) {
+				width: 2em !important;
+				height: 2em !important;
+			}
+			
+			@include media($medium-screen-up) {
+				width: 3.5em !important;
+				height: 3.5em !important;
+			}
 			
 			* {
 				@include iconic-color($light-gray);
