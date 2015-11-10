@@ -40,3 +40,18 @@ $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $l
 // Animations
 $base-duration: 150ms;
 $base-timing: ease;
+
+// Neat Breakpoints
+$xsmall-screen: 320px;			// 32*10
+$small-screen: 480px;			// 32*15
+$medium-screen: 768px;			// 32*24
+$large-screen: 1024px;			// 32*32
+$xlarge-screen: 1280px;			// 32*40
+$fucking-huge-screen: 1440px;	// 32*45
+
+$xsmall-screen-up: new-breakpoint(min-width $xsmall-screen);
+$small-screen-up: new-breakpoint(min-width $small-screen);
+$medium-screen-up: new-breakpoint(min-width $medium-screen);
+$large-screen-up: new-breakpoint(min-width $large-screen);
+$xlarge-screen-up: new-breakpoint(min-width $xlarge-screen);
+$fucking-huge-screen-up: new-breakpoint(min-width $xlarge-screen);
