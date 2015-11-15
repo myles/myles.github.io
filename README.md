@@ -2,6 +2,10 @@
 
 [![Build Status](https://travis-ci.org/myles/myles.github.io.svg?branch=develop)](https://travis-ci.org/myles/myles.github.io)
 
+This is the source code for [my](http://myles.coffee/ "Myles Braithwaite") GitHub Page.
+
+![Screenshot of Myles Braithwaite's GitHub Page](screenshot.jpg)
+
 ## Usage
 
 **Build** the web site:
