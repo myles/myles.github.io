@@ -1,1 +1,31 @@
-# myles.github.io
+# [myles.github.io](http://myles.github.io)
+
+[![Build Status](https://travis-ci.org/myles/myles.github.io.svg?branch=develop)](https://travis-ci.org/myles/myles.github.io)
+
+## Usage
+
+**Build** the web site:
+
+	$ grunt build
+
+Build the web site and **run** a web server:
+
+	$ grunt run
+
+**Deploy** the web site to GitHub Pages:
+
+	$ grunt deploy
+
+## Develop
+
+You will need to install the *Ruby*, *Node.js*, and *Bower* libraries:
+
+	$ gem install sass
+	$ npm install
+	$ bower install
+
+## Testing Workflow
+
+1. Build the web site
+2. Test the HTML output with `htmlproof`.
+3. If *1* and *2* success it will deploy to GitHub Pages. 
