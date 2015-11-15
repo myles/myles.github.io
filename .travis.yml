@@ -2,12 +2,13 @@ language: node_js
 node_js:
 - '0.10'
 before_script:
-- gem install sass
+- gem install sass html-proofer
 - npm install -g bower grunt-cli
 - npm install
 - bower install
 script:
 - grunt build
+- htmlproof ./build --only-4xx --check-html --disable-external
 after_success:
 - grunt deploy
 env:
