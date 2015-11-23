@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/myles/myles.github.io.svg?branch=develop)](https://travis-ci.org/myles/myles.github.io)
 
-This is the source code for [my](http://myles.coffee/ "Myles Braithwaite") GitHub Page.
+This is the source code for [my GitHub Page](http://myles.github.io/ "Myles Braithwaite GitHub Page") and for my [archive organizations GitHub Page](http://myles.github.io/archive/ "Myles Braithwaite's GitHub Archive").
 
 ![Screenshot of Myles Braithwaite's GitHub Page](screenshot.jpg)
 
