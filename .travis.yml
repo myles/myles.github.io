@@ -8,7 +8,6 @@ before_script:
 - bower install
 script:
 - grunt build
-- htmlproof ./build --only-4xx --check-html --disable-external
 after_success:
 - grunt deploy
 env:
