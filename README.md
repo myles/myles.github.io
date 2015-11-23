@@ -1,6 +1,6 @@
 # [myles.github.io](http://myles.github.io)
 
-[![Build Status](https://travis-ci.org/myles/myles.github.io.svg?branch=develop)](https://travis-ci.org/myles/myles.github.io)
+[![Build Status](https://travis-ci.org/myles/myles.github.io.svg?branch=develop)](https://travis-ci.org/myles/myles.github.io) [![devDependency Status](https://david-dm.org/myles/myles.github.io/dev-status.svg)](https://david-dm.org/myles/myles.github.io#info=devDependencies)
 
 This is the source code for [my GitHub Page](http://myles.github.io/ "Myles Braithwaite GitHub Page") and for [my archive organizations GitHub Page](http://myles.github.io/archive/ "Myles Braithwaite's GitHub Archive").
 
