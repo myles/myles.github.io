@@ -7,7 +7,7 @@ $ ->
           '<a href="{{html_url}}">' +
             '<h2>' + 
               '{{#if language}}{{language}}: {{/if}}' +
-              '{{full_name}} ' +
+              '{{name}} ' +
             '</h2>' +
           '</a>' +
           '<ul class="bullet-links">' +
@@ -56,12 +56,14 @@ $ ->
   articleRepo = $('#js-github-projects')
   articleArchiveRepo = $('#js-github-archive-projects')
   
-  jQuery.getJSON 'https://api.github.com/users/myles/repos?sort=updated&type=all&callback=?', (data) ->
-    articleRepo.html(template(data))
-    return
+  if articleRepo
+    jQuery.getJSON 'https://api.github.com/users/myles/repos?sort=updated&type=all&callback=?', (data) ->
+      articleRepo.html(template(data))
+      return
   
-  jQuery.getJSON 'https://api.github.com/orgs/myles-archive/repos?sort=updated&type=all&callback=?', (data) ->
-    articleArchiveRepo.html(template(data))
-    return
+  if articleArchiveRepo
+    jQuery.getJSON 'https://api.github.com/orgs/myles-archive/repos?sort=updated&type=all&callback=?', (data) ->
+      articleArchiveRepo.html(template(data))
+      return
   
   return
