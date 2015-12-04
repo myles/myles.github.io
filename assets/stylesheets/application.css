@@ -646,13 +646,6 @@ body {
   margin: 0 auto;
 }
 
-.wrapper {
-  width: 100%;
-}
-.wrapper .container {
-  height: 100vh;
-}
-
 .bio {
   background-color: #c54e4f;
 }
@@ -660,13 +653,15 @@ body {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
 }
 .bio .container::after {
   clear: both;
   content: "";
   display: table;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .bio .container {
     -webkit-box-align: center;
     -moz-box-align: center;
@@ -705,7 +700,7 @@ body {
 .bio article:last-child {
   margin-right: 0;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .bio article {
     float: left;
     display: block;
@@ -729,7 +724,7 @@ body {
   margin-bottom: 1em;
   text-align: center;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .bio header {
     text-align: left;
   }
@@ -770,13 +765,13 @@ body {
   width: 1.5em !important;
   height: 1.5em !important;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
   .bio footer .iconic {
     width: 2em !important;
     height: 2em !important;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .bio footer .iconic {
     width: 3.5em !important;
     height: 3.5em !important;
