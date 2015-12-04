@@ -4,7 +4,7 @@
 
 This is the source code for [my GitHub Page](http://myles.github.io/ "Myles Braithwaite GitHub Page") and for [my archive organizations GitHub Page](http://myles.github.io/archive/ "Myles Braithwaite's GitHub Archive").
 
-![Screenshot of Myles Braithwaite's GitHub Page](screenshot.jpg)
+![Screenshot of Myles Braithwaite's GitHub Page](screenshot.png)
 
 ## Usage
 
@@ -32,4 +32,4 @@ You will need to install the *Ruby*, *Node.js*, and *Bower* libraries:
 
 1. Build the web site
 2. Test the HTML output with `htmlproof`.
-3. If *1* and *2* success it will deploy to GitHub Pages. 
+3. If *1* and *2* success it will deploy to GitHub Pages.
