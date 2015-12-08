@@ -8,7 +8,13 @@ module.exports = function (grunt) {
             partials: [
                 'source/partials/*.html',
                 'source/partials/*.md'
-            ]
+            ],
+            plugins: ['grunt-assemble-sitemap'],
+            sitemap: {
+                homepage: 'http://myles.github.io',
+                changefreq: 'daily',
+                priority: '0.8'
+            }
         },
         pages: {
             files: {
