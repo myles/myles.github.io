@@ -13,7 +13,8 @@ module.exports = function (grunt) {
             sitemap: {
                 homepage: 'http://myles.github.io',
                 changefreq: 'daily',
-                priority: '0.8'
+                priority: '0.8',
+                relativedest: true
             }
         },
         pages: {
