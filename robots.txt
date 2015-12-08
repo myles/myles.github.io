@@ -1,0 +1,4 @@
+User-agent: *
+
+
+Sitemap: http://myles.github.io/build/sitemap.xml
