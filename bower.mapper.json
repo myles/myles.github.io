@@ -1,11 +1,20 @@
 {
-"svg-injector": {
-"js": { "dist/svg-injector.js": "dist/svg-injector.min.js" }
-},
-"handlebars": {
-"js": { }
-},
-"jquery": {
-"js": { "dist/jquery.js": "dist/jquery.min.js" }
-}
+  "svg-injector": {
+    "js": { "dist/svg-injector.js": "dist/svg-injector.min.js" }
+  },
+  "handlebars": {
+    "js": { "handlebars.js": "handlebars.min.js" }
+  },
+  "jquery": {
+    "js": { "dist/jquery.js": "dist/jquery.min.js" }
+  },
+  "octicons": {
+    "svg": [
+      "book.svg",
+      "desktop-download.svg",
+      "issue-open.svg",
+      "link-external.svg",
+      "logo-github.svg"
+    ]
+  }
 }
