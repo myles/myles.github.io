@@ -5,6 +5,7 @@
     template = Handlebars.compile(source);
     articleRepo = $('#js-github-projects');
     articleArchiveRepo = $('#js-github-archive-projects');
+    SVGInjector($('.iconic'));
     if (articleRepo) {
       jQuery.getJSON('https://api.github.com/users/myles/repos?sort=updated&type=all&per_page=100&callback=?', function(data) {
         articleRepo.html(template(data));
