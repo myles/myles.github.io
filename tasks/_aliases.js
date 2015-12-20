@@ -4,7 +4,8 @@ module.exports = function (grunt) {
         'favicons',
         'copy',
         'sass',
-        'coffee'
+        'coffee',
+        'bower-mapper'
     ]);
     
     grunt.registerTask('run', [
