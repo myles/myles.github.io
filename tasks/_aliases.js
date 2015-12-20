@@ -8,7 +8,7 @@ module.exports = function (grunt) {
         'bower-mapper'
     ]);
     
-    grunt.registerTask('run', [
+    grunt.registerTask('develop', [
         'build',
         'connect:server',
         'watch'
@@ -22,6 +22,6 @@ module.exports = function (grunt) {
     ]);
     
     grunt.registerTask('default', [
-        'run'
+        'develop'
     ]);
 };
