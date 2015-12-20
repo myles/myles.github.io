@@ -57,12 +57,12 @@ $ ->
   articleArchiveRepo = $('#js-github-archive-projects')
   
   if articleRepo
-    jQuery.getJSON 'https://api.github.com/users/myles/repos?sort=updated&type=all&callback=?', (data) ->
+    jQuery.getJSON 'https://api.github.com/users/myles/repos?sort=updated&type=all&per_page=100&callback=?', (data) ->
       articleRepo.html(template(data))
       return
   
   if articleArchiveRepo
-    jQuery.getJSON 'https://api.github.com/orgs/myles-archive/repos?sort=updated&type=all&callback=?', (data) ->
+    jQuery.getJSON 'https://api.github.com/orgs/myles-archive/repos?sort=updated&type=all&per_page=100&callback=?', (data) ->
       articleArchiveRepo.html(template(data))
       return
   
