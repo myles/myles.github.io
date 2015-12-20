@@ -6,12 +6,12 @@
     articleRepo = $('#js-github-projects');
     articleArchiveRepo = $('#js-github-archive-projects');
     if (articleRepo) {
-      jQuery.getJSON('https://api.github.com/users/myles/repos?sort=updated&type=all&callback=?', function(data) {
+      jQuery.getJSON('https://api.github.com/users/myles/repos?sort=updated&type=all&per_page=100&callback=?', function(data) {
         articleRepo.html(template(data));
       });
     }
     if (articleArchiveRepo) {
-      jQuery.getJSON('https://api.github.com/orgs/myles-archive/repos?sort=updated&type=all&callback=?', function(data) {
+      jQuery.getJSON('https://api.github.com/orgs/myles-archive/repos?sort=updated&type=all&per_page=100&callback=?', function(data) {
         articleArchiveRepo.html(template(data));
       });
     }
