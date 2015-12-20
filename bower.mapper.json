@@ -10,11 +10,11 @@
   },
   "octicons": {
     "svg": [
-      "book.svg",
-      "desktop-download.svg",
-      "issue-open.svg",
-      "link-external.svg",
-      "logo-github.svg"
+      "svg/book.svg",
+      "svg/desktop-download.svg",
+      "svg/issue-open.svg",
+      "svg/link-external.svg",
+      "svg/logo-github.svg"
     ]
   }
 }
