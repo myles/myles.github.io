@@ -6,7 +6,7 @@ module.exports = function (grunt) {
             useMin: true
         },
         svg: {
-            src: ["octicons"],
+            src: ["octicons", "open-iconic"],
             dest: "./build/assets/images/"
         }
     };
