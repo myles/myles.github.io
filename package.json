@@ -22,6 +22,7 @@
     "grunt-favicons": "^0.7.0",
     "grunt-gh-pages": "^1.0.0",
     "handlebars-helpers": "^0.5.8",
-    "grunt-assemble-sitemap": "^0.2.6"
+    "grunt-assemble-sitemap": "^0.2.6",
+    "bower-mapper": "^1.0.5"
   }
 }
