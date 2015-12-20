@@ -4,6 +4,10 @@ module.exports = function (grunt) {
             src: ["svg-injector", "handlebars", "jquery"],
             dest: "./source/assets/javascript/",
             useMin: true
+        },
+        svg: {
+            src: ["octicons"],
+            dest: "./source/assets/images/"
         }
     };
     
