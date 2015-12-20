@@ -8,8 +8,10 @@
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
-		<link rel="stylesheet" href="/assets/stylesheets/application.css">
+		<link rel="stylesheet" href="../assets/stylesheets/application.css">
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Montserrat">
+		
+		<link rel="alternate" type="application/rss+xml" href="https://github.com/myles.atom">
 	</head>
 	<body>
 		<div id="projects" class="wrapper projects">
@@ -20,15 +22,63 @@
 			</header>
 			
 			<section id="js-github-archive-projects"></section>
+			<script id="js-github-projects-template" type="text/x-handlebars-template">
+				<ul class="bullets">
+				{{#each data}}
+				{{#unless fork}}
+					<li class="bullet">
+						<div class="bullet-content">
+							<a href="">
+								<h2>
+									{{#if language}}{{language}}: {{/if}}
+									{{name}}
+								</h2>
+							</a>
+							<ul class="bullet-links">
+								<li>
+									<a href="{{html_url}}">
+										<img src="../assets/images/octoface.svg" title="GitHub">
+									</a>
+								</li>
+								{{#if homepage}}
+								<li>
+									<a href="{{homepage}}">
+										<img src="../assets/images/link-external.svg" title="Homepage">
+									</a>
+								</li>
+								{{/if}}
+								{{#if has_wiki}}
+								<li>
+									<a href="{{html_url}}/wiki">
+										<img src="../assets/images/book.svg" title="Wiki">
+									</a>
+								</li>
+								{{/if}}
+								{{#if has_issues}}
+								<li>
+									<a href="{{html_url}}/issues">
+										<img src="../assets/images/issue-opened.svg" title="Wiki">
+									</a>
+								</li>
+								{{/if}}
+							</ul>
+							{{#if description}}
+							<p>{{description}}</p>
+							{{/if}}
+						</div>
+					</li>
+				{{/unless}}
+				{{/each}}
+				</ul>
+			</script>
 		</article>
 	</div>
 </div>
 
 		
-		<script src="/assets/javascript/jquery.min.js"></script>
-		<script src="/assets/javascript/handlebars.min.js"></script>
-		<script src="/assets/javascript/svg-injector.min.js"></script>
-		<script src="/assets/javascript/analytics.js"></script>
-		<script src="/assets/javascript/application.js"></script>
+		<script src="../assets/javascript/jquery.min.js"></script>
+		<script src="../assets/javascript/handlebars.min.js"></script>
+		<script src="../assets/javascript/svg-injector.min.js"></script>
+		<script src="../assets/javascript/application.js"></script>
 	</body>
 </html>

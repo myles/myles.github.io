@@ -1,21 +1,95 @@
 (function() {
+  var GoogleAnalytics;
+
+  GoogleAnalytics = (function() {
+    function GoogleAnalytics() {}
+
+    GoogleAnalytics.init = function(webPropertyId) {
+      var scriptTag;
+      this._initQueue(webPropertyId);
+      scriptTag = this._createScriptTag();
+      this._injectScriptTag(scriptTag);
+      return true;
+    };
+
+    GoogleAnalytics._initQueue = function(webPropertyId) {
+      if (window._gaq == null) {
+        window._gaq = [];
+      }
+      window._gaq.push(['_setAccount', webPropertyId]);
+      return window._gaq.push(['_trackPageview']);
+    };
+
+    GoogleAnalytics._createScriptTag = function() {
+      var protocol, scriptTag;
+      scriptTag = document.createElement('script');
+      scriptTag.type = 'text/javascript';
+      scriptTag.async = true;
+      protocol = location.protocol;
+      scriptTag.src = protocol + "//stats.g.doubleclick.net/dc.js";
+      return scriptTag;
+    };
+
+    GoogleAnalytics._injectScriptTag = function(scriptTag) {
+      var firstScriptTag;
+      firstScriptTag = document.getElementsByTagName('script')[0];
+      return firstScriptTag.parentNode.insertBefore(scriptTag, firstScriptTag);
+    };
+
+    GoogleAnalytics.trackPageView = function(url) {
+      return window._gaq.push(['_trackPageview', url]);
+    };
+
+    GoogleAnalytics.trackEvent = function(category, action, label, value, nonInteraction) {
+      var argument, i, len, ref, trackedEvent;
+      if (label == null) {
+        label = null;
+      }
+      if (value == null) {
+        value = null;
+      }
+      if (nonInteraction == null) {
+        nonInteraction = null;
+      }
+      trackedEvent = ['_trackEvent', category, action];
+      ref = [label, value, nonInteraction];
+      for (i = 0, len = ref.length; i < len; i++) {
+        argument = ref[i];
+        if (argument != null) {
+          trackedEvent.push(argument);
+        } else {
+          break;
+        }
+      }
+      return window._gaq.push(trackedEvent);
+    };
+
+    return GoogleAnalytics;
+
+  })();
+
+  window.GoogleAnalytics = GoogleAnalytics;
+
   $(function() {
     var articleArchiveRepo, articleRepo, source, template;
-    source = '<ul class="bullets">' + '{{#each data}}' + '{{#unless fork}}' + '<li class="bullet">' + '<div class="bullet-content">' + '<a href="{{html_url}}">' + '<h2>' + '{{#if language}}{{language}}: {{/if}}' + '{{name}} ' + '</h2>' + '</a>' + '<ul class="bullet-links">' + '<li>' + '<a href="{{html_url}}">' + '<img src="/assets/images/octoface.svg" title="GitHub">' + '</a>' + '</li>' + '{{#if homepage}}' + '<li>' + '<a href="{{homepage}}">' + '<img src="/assets/images/link-external.svg" title="Homepage">' + '</a>' + '</li>' + '{{/if}}' + '{{#if has_wiki}}' + '<li>' + '<a href="{{html_url}}/wiki">' + '<img src="/assets/images/book.svg" title="Wiki">' + '</a>' + '</li>' + '{{/if}}' + '{{#if has_issues}}' + '<li>' + '<a href="{{html_url}}/issues">' + '<img src="/assets/images/issue-opened.svg" title="Wiki">' + '</a>' + '</li>' + '{{/if}}' + '</ul>' + '<p>{{description}}</p>' + '</div>' + '</li>' + '{{/unless}}' + '{{/each}}' + '</ul>';
+    window.GoogleAnalytics.init('UA-1642439-37');
+    source = $('#js-github-projects-template').html();
     template = Handlebars.compile(source);
     articleRepo = $('#js-github-projects');
     articleArchiveRepo = $('#js-github-archive-projects');
     SVGInjector($('.iconic'));
     if (articleRepo) {
-      jQuery.getJSON('https://api.github.com/users/myles/repos?sort=updated&type=all&per_page=100&callback=?', function(data) {
-        articleRepo.html(template(data));
+      jQuery.getJSON('https://api.github.com/users/myles/repos?sort=updated&type=all&callback=?', function(data) {
+        return articleRepo.html(template(data));
       });
     }
     if (articleArchiveRepo) {
-      jQuery.getJSON('https://api.github.com/orgs/myles-archive/repos?sort=updated&type=all&per_page=100&callback=?', function(data) {
+      jQuery.getJSON('https://api.github.com/orgs/myles-archive/repos?sort=updated&type=all&callback=?', function(data) {
         articleArchiveRepo.html(template(data));
       });
     }
   });
 
 }).call(this);
+
+//# sourceMappingURL=application.js.map
