@@ -17,11 +17,5 @@
       "svg/logo-github.svg",
       "svg/octoface.svg"
     ]
-  },
-  "open-iconic": {
-    "svg": [
-      "svg/envelope-closed.svg",
-      "svg/globe.svg"
-    ]
   }
 }
