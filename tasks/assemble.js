@@ -6,7 +6,7 @@ module.exports = function (grunt) {
             production: false,
             data: 'source/data/*.yml',
             partials: [
-                'source/partials/*.html',
+                'source/partials/*.hbs',
                 'source/partials/*.md'
             ],
             plugins: ['grunt-assemble-sitemap'],
@@ -15,9 +15,13 @@ module.exports = function (grunt) {
                 changefreq: 'daily',
                 priority: '0.8',
                 relativedest: true
-            }
+            },
+            helpers: ['source/helpers/*-helper.js']
         },
         pages: {
+            options: {
+                assets: 'build/assets'
+            },
             files: {
                 'build/': [
                     'source/pages/index.hbs'

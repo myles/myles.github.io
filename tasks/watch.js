@@ -9,7 +9,8 @@ module.exports = function (grunt) {
             ],
             files: [
                 'source/**/*.hbs',
-                'source/**/*.yml'
+                'source/**/*.yml',
+                'source/helpers/*-helper.js'
             ]
         },
         sass: {

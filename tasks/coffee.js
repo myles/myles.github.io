@@ -1,12 +1,15 @@
 module.exports = function (grunt) {
     var config = {
-        glob_to_multiple: {
-            expand: true,
-            flatten: true,
-            cwd: 'source/assets/javascript/',
-            src: ['*.coffee'],
-            dest: 'build/assets/javascript/',
-            ext: '.js'
+        compile: {
+            options: {
+                sourceMap: true
+            },
+            files: {
+                'build/assets/javascript/application.js': [
+                    'source/assets/javascript/analytics.coffee',
+                    'source/assets/javascript/application.coffee'
+                ]
+            }
         }
     };
     
