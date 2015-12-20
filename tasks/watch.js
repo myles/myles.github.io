@@ -28,8 +28,17 @@ module.exports = function (grunt) {
             files: [
                 'source/assets/javascript/*.coffee'
             ]
+        },
+        bower: {
+            tasks: [
+                'bower-mapper'
+            ],
+            files: [
+                'bower.json',
+                'bower.mapper.json'
+            ]
         }
     };
-    
+
     grunt.config.set('watch', config);
 };
