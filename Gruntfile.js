@@ -4,6 +4,7 @@ module.exports = function(grunt) {
     });
     
     grunt.loadNpmTasks('assemble');
+    grunt.loadNpmTasks('bower-mapper');
     grunt.loadNpmTasks('grunt-gh-pages');
     grunt.loadNpmTasks('grunt-favicons');
     grunt.loadNpmTasks('grunt-contrib-copy');
