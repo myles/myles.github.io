@@ -1,0 +1,56 @@
+projects:
+  - slug: jekyll-typogrify
+    title: Jekyll::Typogrify
+    category: library
+    framework: jekyll
+    languages: [ruby]
+    thesis: A Jekyll plugin that provides the common typography filters.
+    environment: web
+
+  - slug: mylesbraithwaite.org
+    title: "Myles' Lab"
+    category: web-site
+    framework: jekyll
+    languages: [ruby, javascript, scss]
+    thesis: A web site for my programming experiments.
+    environment: web
+
+  - slug: dotfiles
+    title: "~/.dotfiles"
+    category: infrastructure
+    thesis: "My dotfiles for servers, workstations, and laptops."
+
+  - slug: old-fashioned
+    title: Old Fashioned
+    category: library
+    languages: [javascript, scss]
+    thesis: A frontend framework.
+    environment: web
+
+  - slug: mylesbraithwaite.com
+    title: Myles' Blog
+    category: web-site
+    framework: jekyll
+    languages: [ruby, javascript, scss]
+    thesis: My personal blog.
+    environment: web
+
+  - slug: me-api
+    title: Myles' API
+    category: service
+    languages: [python]
+    environment: web
+    thesis: An JSON based API that does all the auth for my social feeds.
+    tags: [flask, python]
+
+  - slug: myles.life
+    title: Myle' Life
+    category: web-site
+    framework: wordpress
+    languages: [php]
+    thesis: A blog of random photos from my life.
+    environment: web
+
+  - slug: five-little-monkeys
+    title: Five Little Monekys
+    thesis: Comparing a bunch of programming languages using a nursery rhyme.
