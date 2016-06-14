@@ -1,22 +1,17 @@
 title: Myles Braithwaite
-
 footer_links:
-  
-  - title: mylesbraithwaite.com
-    url: http://mylesbraithwaite.com/
+  - title: mylesb.ca
+    url: http://mylesb.ca/
     description: Myles Braithwaite's Homepage
     image: globe.svg
-
   - title: me@mylesbraithwaite.com
     url: mailto:me@mylesbraithwaite.com
     description: Myles Braithwaite's Email Address
-    image: envelope.svg
-
+    image: envelope-closed.svg
   - title: twitter.com/mylesb
     url: https://twitter.com/mylesb
     description: Myles Braithwaite's Twitter Account
     image: social-twitter.svg
-
   - title: github.com/myles
     url: https://github.com/myles
     description: Myles Braithwaite's GitHub Account

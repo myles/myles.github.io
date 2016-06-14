@@ -1,0 +1,49 @@
+<script id="js-github-projects-template" type="text/x-handlebars-template">
+	<ul class="bullets">
+	\{{#each data}}
+	\{{#unless fork}}
+		<li class="bullet">
+			<div class="bullet-content">
+				<a href="{{html_url}}">
+					<h2>
+						\{{#if language}}\{{language}}: \{{/if}}
+						\{{name}}
+					</h2>
+				</a>
+				<ul class="bullet-links">
+					<li>
+						<a href="\{{html_url}}">
+							<img src="{{assets}}/images/octoface.svg" title="GitHub">
+						</a>
+					</li>
+					\{{#if homepage}}
+					<li>
+						<a href="\{{homepage}}">
+							<img src="{{assets}}/images/link-external.svg" title="Homepage">
+						</a>
+					</li>
+					\{{/if}}
+					\{{#if has_wiki}}
+					<li>
+						<a href="\{{html_url}}/wiki">
+							<img src="{{assets}}/images/book.svg" title="Wiki">
+						</a>
+					</li>
+					\{{/if}}
+					\{{#if has_issues}}
+					<li>
+						<a href="\{{html_url}}/issues">
+							<img src="{{assets}}/images/issue-opened.svg" title="Wiki">
+						</a>
+					</li>
+					\{{/if}}
+				</ul>
+				\{{#if description}}
+				<p>\{{description}}</p>
+				\{{/if}}
+			</div>
+		</li>
+	\{{/unless}}
+	\{{/each}}
+	</ul>
+</script>

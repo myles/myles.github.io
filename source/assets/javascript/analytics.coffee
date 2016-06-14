@@ -31,10 +31,4 @@ class GoogleAnalytics
       if argument? then trackedEvent.push argument else break
     window._gaq.push trackedEvent
 
-
-
-# Assuming you're using jQuery to get up and going...
-$ ->
-  # Replace the parameter to GoogleAnalytics.init with your Google Analytics
-  # web property ID.  This tracks the initial page view.
-  GoogleAnalytics.init 'UA-1642439-37'
+window.GoogleAnalytics = GoogleAnalytics

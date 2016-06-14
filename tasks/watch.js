@@ -9,7 +9,8 @@ module.exports = function (grunt) {
             ],
             files: [
                 'source/**/*.hbs',
-                'source/**/*.yml'
+                'source/**/*.yml',
+                'source/helpers/*-helper.js'
             ]
         },
         sass: {
@@ -28,8 +29,17 @@ module.exports = function (grunt) {
             files: [
                 'source/assets/javascript/*.coffee'
             ]
+        },
+        bower: {
+            tasks: [
+                'bower-mapper'
+            ],
+            files: [
+                'bower.json',
+                'bower.mapper.json'
+            ]
         }
     };
-    
+
     grunt.config.set('watch', config);
 };

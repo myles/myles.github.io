@@ -1,25 +1,21 @@
 $ ->
-  source = '<ul class="bullets">' +
-    '{{#each data}}' +
-    '{{#unless fork}}' +
-      '<li class="bullet">' +
-        '<div class="bullet-content">' +
-          '<a href="{{html_url}}">' +
-            '<h2>{{full_name}}</h2>' +
-          '</a>' +
-          '<p>{{description}}</p>' +
-        '</div>' +
-      '</li>' +
-    '{{/unless}}' +
-    '{{/each}}' +
-    '</ul>'
+  window.GoogleAnalytics.init 'UA-1642439-37'
   
-  api_url = 'https://api.github.com/users/myles/repos?sort=updated&type=all&callback=?'
-  
+  source = $('#js-github-projects-template').html()
   template = Handlebars.compile(source)
-  articleRepo = $('#js-github-projects')
   
-  jQuery.getJSON api_url, (data) ->
-    articleRepo.html(template(data))
-    return
+  articleRepo = $('#js-github-projects')
+  articleArchiveRepo = $('#js-github-archive-projects')
+  
+  SVGInjector $('.iconic')
+  
+  if articleRepo
+    jQuery.getJSON 'https://api.github.com/users/myles/repos?sort=updated&type=all&callback=?', (data) ->
+      articleRepo.html(template(data))
+  
+  if articleArchiveRepo
+    jQuery.getJSON 'https://api.github.com/orgs/myles-archive/repos?sort=updated&type=all&callback=?', (data) ->
+      articleArchiveRepo.html(template(data))
+      return
+  
   return

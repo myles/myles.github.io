@@ -4,10 +4,11 @@ module.exports = function (grunt) {
         'favicons',
         'copy',
         'sass',
-        'coffee'
+        'coffee',
+        'bower-mapper'
     ]);
     
-    grunt.registerTask('run', [
+    grunt.registerTask('develop', [
         'build',
         'connect:server',
         'watch'
@@ -21,6 +22,6 @@ module.exports = function (grunt) {
     ]);
     
     grunt.registerTask('default', [
-        'run'
+        'develop'
     ]);
 };
