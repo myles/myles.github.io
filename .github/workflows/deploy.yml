@@ -24,18 +24,17 @@ jobs:
 
       - name: Get node_modules cache directory 🔎
         id: get-npm-cache-directory
-        shell: bash
         run: |
-          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+          echo "::set-output name=dir::$(npm config get cache)"
 
       - name: Cache node_modules 📦
         id: cache-npm-directory
         uses: actions/cache@v3.0.2
         with:
-          path: ${{ steps.get-npm-cache-directory.outputs.STORE_PATH }}
-          key: ${{ runner.os }}-npm-store-${{ hashFiles('**/package-lock.yaml') }}
+          path: ${{ steps.get-npm-cache-directory.outputs.dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
-            ${{ runner.os }}-npm-store-
+            ${{ runner.os }}-node-
 
       - name: Install dependencies 👨🏻‍💻
         id: install-npm-dependencies
