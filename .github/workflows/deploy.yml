@@ -38,7 +38,7 @@ jobs:
 
       - name: Install dependencies 👨🏻‍💻
         id: install-npm-dependencies
-        run: npm install --production
+        run: npm install
 
       - name: Build project 🧱
         id: build-projects
