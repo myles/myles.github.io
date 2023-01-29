@@ -1,11 +1,15 @@
 <script>
-import CTA from "./components/CTA.vue";
-import RepoList from "./components/RepoList.vue";
-import RepoListItem from "./components/RepoListItem.vue";
+import CTA from "./components/cta/CTA.vue";
+import RepoList from "./components/repository/RepoList.vue";
+import RepoListItem from "./components/repository/RepoListItem.vue";
 
 export default {
   data: () => ({
-    repositories: [],
+    siteName: "Myles Braithwaite",
+    siteDescription: "Some of my GitHub projects.",
+    links: [],
+
+    remoteRepositories: [],
     repos: [
       { owner: "myles", repo: "notebooks" },
       { owner: "myles", repo: "lazy-myles" },
@@ -42,21 +46,28 @@ export default {
           },
         })
       ).json();
-      this.repositories = [repoData, ...this.repositories];
+      this.remoteRepositories = [repoData, ...this.repositories];
+    },
+  },
+
+  computed: {
+    repositories() {
+      return this.remoteRepositories.sort((a, b) => a.name > b.name);
     },
   },
 };
 </script>
 
 <template>
-  <div class="mx-4">
+  <div class="myles-github-io">
     <CTA
-      siteName="GitHub Projects"
-      siteDescription="Some of Myles Braithwaite's GitHub projects."
-      class="mt-4"
+      :siteName="siteName"
+      :siteDescription="siteDescription"
+      :links="links"
+      class="myles-github-io__section myles-github-io__section--cta"
     />
 
-    <RepoList class="mt-4">
+    <RepoList class="myles-github-io__section myles-github-io__section--repos">
       <RepoListItem
         v-for="(repository, index) in repositories"
         :key="index"
@@ -67,4 +78,12 @@ export default {
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.myles-github-io {
+  @apply mx-4;
+}
+
+.myles-github-io__section {
+  @apply mt-4;
+}
+</style>
